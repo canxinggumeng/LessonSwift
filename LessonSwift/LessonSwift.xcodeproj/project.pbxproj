@@ -32,6 +32,12 @@
 		2AA53A231DA8D4700038B4B7 /* UITableView+CacheCellHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A211DA8D4700038B4B7 /* UITableView+CacheCellHeight.swift */; };
 		2AA53A241DA8D4700038B4B7 /* UITableViewCell+AutoCellHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A221DA8D4700038B4B7 /* UITableViewCell+AutoCellHeight.swift */; };
 		2AA53A371DA8E7320038B4B7 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A361DA8E7320038B4B7 /* Tools.swift */; };
+		2AA53A4A1DA9DE030038B4B7 /* ActiveBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A431DA9DE030038B4B7 /* ActiveBuilder.swift */; };
+		2AA53A4B1DA9DE030038B4B7 /* ActiveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A451DA9DE030038B4B7 /* ActiveLabel.swift */; };
+		2AA53A4C1DA9DE030038B4B7 /* ActiveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A461DA9DE030038B4B7 /* ActiveType.swift */; };
+		2AA53A4D1DA9DE030038B4B7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA53A471DA9DE030038B4B7 /* Info.plist */; };
+		2AA53A4E1DA9DE030038B4B7 /* RegexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A481DA9DE030038B4B7 /* RegexParser.swift */; };
+		2AA53A4F1DA9DE030038B4B7 /* StringTrimExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A491DA9DE030038B4B7 /* StringTrimExtension.swift */; };
 		84D60E7B36E79DDC30C0969F /* Pods_LessonSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A93A276D7D736BF49F26B2B /* Pods_LessonSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -197,6 +203,13 @@
 		2AA53A211DA8D4700038B4B7 /* UITableView+CacheCellHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+CacheCellHeight.swift"; sourceTree = "<group>"; };
 		2AA53A221DA8D4700038B4B7 /* UITableViewCell+AutoCellHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+AutoCellHeight.swift"; sourceTree = "<group>"; };
 		2AA53A361DA8E7320038B4B7 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		2AA53A431DA9DE030038B4B7 /* ActiveBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBuilder.swift; sourceTree = "<group>"; };
+		2AA53A441DA9DE030038B4B7 /* ActiveLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveLabel.h; sourceTree = "<group>"; };
+		2AA53A451DA9DE030038B4B7 /* ActiveLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveLabel.swift; sourceTree = "<group>"; };
+		2AA53A461DA9DE030038B4B7 /* ActiveType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveType.swift; sourceTree = "<group>"; };
+		2AA53A471DA9DE030038B4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA53A481DA9DE030038B4B7 /* RegexParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexParser.swift; sourceTree = "<group>"; };
+		2AA53A491DA9DE030038B4B7 /* StringTrimExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTrimExtension.swift; sourceTree = "<group>"; };
 		6E6CA113FEE2D4F1DDFD0280 /* Pods-LessonSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessonSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LessonSwift/Pods-LessonSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		8757334D615DB6D467D3E2A1 /* Pods-LessonSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessonSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LessonSwift/Pods-LessonSwift.release.xcconfig"; sourceTree = "<group>"; };
 		8A93A276D7D736BF49F26B2B /* Pods_LessonSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LessonSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +292,7 @@
 		2A8DC2241D9D1FEB00D0B921 /* LessonSwift */ = {
 			isa = PBXGroup;
 			children = (
+				2AA53A421DA9DE030038B4B7 /* ActiveLabel */,
 				2AA53A201DA8D4700038B4B7 /* HYBSnapkitAutoCellHeight */,
 				2AA53A131DA8CABC0038B4B7 /* SnapKit.xcodeproj */,
 				2AA5394C1DA8B1000038B4B7 /* ESPullToRefresh */,
@@ -370,6 +384,20 @@
 				2AA53A221DA8D4700038B4B7 /* UITableViewCell+AutoCellHeight.swift */,
 			);
 			path = HYBSnapkitAutoCellHeight;
+			sourceTree = "<group>";
+		};
+		2AA53A421DA9DE030038B4B7 /* ActiveLabel */ = {
+			isa = PBXGroup;
+			children = (
+				2AA53A431DA9DE030038B4B7 /* ActiveBuilder.swift */,
+				2AA53A441DA9DE030038B4B7 /* ActiveLabel.h */,
+				2AA53A451DA9DE030038B4B7 /* ActiveLabel.swift */,
+				2AA53A461DA9DE030038B4B7 /* ActiveType.swift */,
+				2AA53A471DA9DE030038B4B7 /* Info.plist */,
+				2AA53A481DA9DE030038B4B7 /* RegexParser.swift */,
+				2AA53A491DA9DE030038B4B7 /* StringTrimExtension.swift */,
+			);
+			path = ActiveLabel;
 			sourceTree = "<group>";
 		};
 		537B85CED1735CA937B997AD /* Frameworks */ = {
@@ -623,6 +651,7 @@
 				2A8DC2301D9D1FEB00D0B921 /* LaunchScreen.storyboard in Resources */,
 				2A8DC22D1D9D1FEB00D0B921 /* Assets.xcassets in Resources */,
 				2A8DC22B1D9D1FEB00D0B921 /* Main.storyboard in Resources */,
+				2AA53A4D1DA9DE030038B4B7 /* Info.plist in Resources */,
 				2AA539581DA8B1000038B4B7 /* icon_pull_to_refresh_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,19 +725,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA53A4F1DA9DE030038B4B7 /* StringTrimExtension.swift in Sources */,
+				2AA53A4E1DA9DE030038B4B7 /* RegexParser.swift in Sources */,
 				2AA539561DA8B1000038B4B7 /* ESRefreshFooterAnimator.swift in Sources */,
 				2AA5395D1DA8B1000038B4B7 /* ESRefreshProtocol.swift in Sources */,
 				2AA5395C1DA8B1000038B4B7 /* ESRefreshComponent.swift in Sources */,
 				2A82C6451D9E50FE0025E0E8 /* NetWorkTool.swift in Sources */,
 				2AA539591DA8B1000038B4B7 /* ESPullToRefresh+Manager.swift in Sources */,
 				2AA53A231DA8D4700038B4B7 /* UITableView+CacheCellHeight.swift in Sources */,
+				2AA53A4B1DA9DE030038B4B7 /* ActiveLabel.swift in Sources */,
 				2AA5395A1DA8B1000038B4B7 /* ESPullToRefresh.swift in Sources */,
 				2AA53A371DA8E7320038B4B7 /* Tools.swift in Sources */,
 				2A8DC2281D9D1FEB00D0B921 /* ViewController.swift in Sources */,
 				2AA539571DA8B1000038B4B7 /* ESRefreshHeaderAnimator.swift in Sources */,
+				2AA53A4A1DA9DE030038B4B7 /* ActiveBuilder.swift in Sources */,
 				2AA53A241DA8D4700038B4B7 /* UITableViewCell+AutoCellHeight.swift in Sources */,
 				2A8DC2541D9D200100D0B921 /* myCell.swift in Sources */,
 				2AA5395B1DA8B1000038B4B7 /* ESRefreshAnimator.swift in Sources */,
+				2AA53A4C1DA9DE030038B4B7 /* ActiveType.swift in Sources */,
 				2A8DC2261D9D1FEB00D0B921 /* AppDelegate.swift in Sources */,
 				2A8DC25A1D9DFE3600D0B921 /* viewModel.swift in Sources */,
 				2A8DC2581D9DFC7700D0B921 /* DetialViewController.swift in Sources */,

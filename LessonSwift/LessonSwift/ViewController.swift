@@ -129,22 +129,25 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let alter = UIAlertController.init(title: "提示", message: String(indexPath.row),preferredStyle: UIAlertControllerStyle.actionSheet);
-        let alertViewAction: UIAlertAction = UIAlertAction.init(title: "确定", style: UIAlertActionStyle.default, handler: { (UIAlertAction) -> Void in
-            
-            let detialVC = DetialViewController()
-            
-            self.navigationController?.pushViewController(detialVC, animated: true);
-        })
+        let detialVC = DetialViewController()
         
-       
-        
-        let alertViewCancelAction: UIAlertAction = UIAlertAction.init(title: "取消", style: UIAlertActionStyle.cancel, handler: nil)
-        alter.addAction(alertViewAction)
-        alter.addAction(alertViewCancelAction)
-        self.present(alter, animated: true) {
-            
-        }
+        self.navigationController?.pushViewController(detialVC, animated: true);
+//        let alter = UIAlertController.init(title: "提示", message: String(indexPath.row),preferredStyle: UIAlertControllerStyle.actionSheet);
+//        let alertViewAction: UIAlertAction = UIAlertAction.init(title: "确定", style: UIAlertActionStyle.default, handler: { (UIAlertAction) -> Void in
+//            
+//            let detialVC = DetialViewController()
+//            
+//            self.navigationController?.pushViewController(detialVC, animated: true);
+//        })
+//        
+//       
+//        
+//        let alertViewCancelAction: UIAlertAction = UIAlertAction.init(title: "取消", style: UIAlertActionStyle.cancel, handler: nil)
+//        alter.addAction(alertViewAction)
+//        alter.addAction(alertViewCancelAction)
+//        self.present(alter, animated: true) {
+//            
+//        }
         
     }
     

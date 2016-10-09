@@ -8,11 +8,21 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,mydelegate {
     
 //    var nameList = ["1","2","3"]
     let arraymodel = NSMutableArray();
-    var tableview : UITableView?
+    var tableview : UITableView!
+    var pageNo = 1
+    
+
+    
+    override func viewDidLayoutSubviews() {
+        
+        super.viewDidLayoutSubviews()
+        self.tableview.frame = self.view.frame;
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,14 +49,28 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         //        self.changcolor();
         
         
-        self.tableview = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height));
-        self.tableview?.delegate = self;
-        self.tableview?.dataSource = self;
-        self.view.addSubview(self.tableview!);
+        self.tableview = UITableView.init(frame: self.view.frame);
+        self.tableview.delegate = self;
+        self.tableview.dataSource = self;
+//        self.tableview.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.view.addSubview(self.tableview);
         
-//        creatData();
+
+       let _ =   self.tableview.es_addPullToRefresh{
         
-        alamofireRequest();
+            [weak self] in
+            self?.refreshHeader()
+            
+        }
+        
+      let _ =   self.tableview.es_addInfiniteScrolling {
+           
+            
+            [weak self] in
+            self?.refreshFooter()
+            
+            }
+        self.tableview.es_startPullToRefresh()
         
     }
     
@@ -57,7 +81,31 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return  60;
+        
+        
+        if arraymodel.count>0 {
+            
+            let model = arraymodel[indexPath.row] as! viewModel
+            
+            // 采用第三方
+            return mycell.hyb_cellHeight(forTableView: tableView, config: { (cell) in
+                
+                let itemCell = cell as? mycell
+                itemCell?.setValueWith(item: model )
+                
+                }, updateCacheIfNeeded: { () -> (key: String, stateKey: String, shouldUpdate: Bool) in
+                    return (model.Ids," ",false)
+            })+10
+            
+            // 自己写的方法
+//            return mycell.cellForheigh(item: model)
+            
+            
+        }else{
+        
+            return 0
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,7 +122,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 cell?.setValueWith(item: arraymodel[indexPath.row] as! viewModel)
         }
 
-        
+       
         cell?.mydelegate = self;
         return cell!;
     }
@@ -112,6 +160,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func creatData() {
         
+        
         let nameList = ["撒比套1","撒比套2","撒比套3","likun4","撒比套5","撒比套6","撒比套7","撒比套8","撒比套9","撒比套10",]
         let age = [1,2,3,4,5,6,7,8,9,10]
         
@@ -126,48 +175,90 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
             
         }
+        
+        
 
         
     
     }
     
     
-    func alamofireRequest() {
+    func refreshHeader() {
+    
+        pageNo = 1
+        arraymodel.removeAllObjects()
+        
+        alamofireRequest(pageNo: String.init(pageNo))
+        
+        
+    }
+    
+    func refreshFooter() {
+        pageNo += 1;
+        
+        alamofireRequest(pageNo: String.init(pageNo))
+        
+    }
+    
+    func alamofireRequest(pageNo:String ) {
 
         let url = "http://a.haaaaaa.com/mobile/home/indexInWorks.do"
         
         let params = [
         
             "level":"1",
-            "pageNo":"1",
+            "pageNo":pageNo,
             "pageSize":"10"
         ]
         
 
         NetWorkTool.POST(URLString: url, parameters: params as [String : AnyObject]?, successHandler: {(result) in
             
-            if let json = result as? NSDictionary{
+     
+            //  采用swiftyjson来解析数据 更安全
+            let j = JSON.init(result)
+            
+            let path = ["data","works"]
+            
+            let w = j[path].arrayObject
+            
+            for dic in w!{
                 
-                let data = json.value(forKey: "data") as? NSDictionary
+                let mode = viewModel.init(item: dic as! NSDictionary)
                 
-                let works = data?.object(forKey: "works") as? NSArray
-                
-                for dic in works!{
-                    
-                    let mode = viewModel.init(item: dic as! NSDictionary)
-                    
-                    self.arraymodel.add(mode);
-                    
-                }
+                self.arraymodel.add(mode);
                 
             }
             
-            self.tableview?.reloadData();
+            
+            // 常规解析方法
+            
+//            if let json = result as? NSDictionary{
+//                
+//                let data = json.value(forKey: "data") as? NSDictionary
+//                
+//                let works = data?.object(forKey: "works") as? NSArray
+//                
+//                for dic in works!{
+//                    
+//                    let mode = viewModel.init(item: dic as! NSDictionary)
+//                    
+//                    self.arraymodel.add(mode);
+//                    
+//                }
+//                
+//            }
+            
+            self.tableview.reloadData();
 
+            self.tableview.es_stopPullToRefresh(completion: true)
+            self.tableview.es_stopLoadingMore()
             
             }) { (error) in
                 
-                
+                print("=====\(error)======")
+                self.tableview.es_stopPullToRefresh(completion: true)
+                self.tableview.es_stopLoadingMore()
         }
     
         

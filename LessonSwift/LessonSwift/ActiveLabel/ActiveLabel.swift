@@ -441,7 +441,7 @@ typealias ElementTuple = (range: NSRange, element: ActiveElement, type: ActiveTy
     
     public override func touchesCancelled(_ touches: Set<UITouch>?, with event: UIEvent?) {
         guard let touch = touches?.first else { return }
-        onTouch(touch: touch)
+        let _ = onTouch(touch: touch)
         super.touchesCancelled(touches!, with: event)
     }
 

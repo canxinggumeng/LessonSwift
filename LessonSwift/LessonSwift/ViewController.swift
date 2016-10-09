@@ -48,7 +48,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         //
         //        self.changcolor();
         
-        
+        self.title = "TableViewList"
         self.tableview = UITableView.init(frame: self.view.frame);
         self.tableview.delegate = self;
         self.tableview.dataSource = self;
@@ -94,7 +94,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 itemCell?.setValueWith(item: model )
                 
                 }, updateCacheIfNeeded: { () -> (key: String, stateKey: String, shouldUpdate: Bool) in
-                    return (model.Ids," ",false)
+                    return (model.Ids," ",true)
             })+10
             
             // 自己写的方法

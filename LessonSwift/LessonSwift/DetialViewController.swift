@@ -25,7 +25,7 @@ class DetialViewController: UIViewController {
         label.enabledTypes.append(customType2)
 
         label.urlMaximumLength = 50
-        label.backgroundColor = UIColor.cyan
+        label.backgroundColor = Tools.hexStringToColor(hexString: "#999999")
         
        let _  = label.customize { label in
             label.text = "This is a post with #multiple# and #hashtags# and a @userhandle. Links are also supported like" +
@@ -59,7 +59,14 @@ class DetialViewController: UIViewController {
         
        self.view.addSubview(label)
         
+        self.title = "ActiveLabel"
         
+        // 系统的
+//        self.systemNavigationItem()
+       
+        // 自定义的
+        
+        self.DIYNavigationItem()
         
     }
     
@@ -67,6 +74,35 @@ class DetialViewController: UIViewController {
         let vc = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         vc.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         present(vc, animated: true, completion: nil)
+    }
+    
+    
+    // 自定义的
+    
+    func DIYNavigationItem(){
+        
+        let btn = UIButton.init(type: UIButtonType.custom)
+        btn.frame = CGRect.init(x: 0, y: 0, width: 50, height: 30)
+        btn.setTitle("分享", for: UIControlState.normal)
+        btn.setTitleColor(UIColor.red, for: UIControlState.normal)
+        let item2 = UIBarButtonItem.init(customView: btn)
+        self.navigationItem.setRightBarButton(item2, animated: true)
+        
+        
+        
+    }
+    
+    
+    func systemNavigationItem() {
+        
+        let rightBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.edit,
+                                       target: self, action: #selector(self.onMove))
+        self.navigationItem.setRightBarButton(rightBtn, animated: true)
+    }
+    
+    func onMove() {
+        
+        print("edit")
     }
     
     

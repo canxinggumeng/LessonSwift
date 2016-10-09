@@ -111,7 +111,10 @@ class mycell: UITableViewCell {
         self.agelabel?.text = String(item.age)
         desLabel.text = item.des
         let url = URL(string: item.imagePath)
-        self.myImageView.kf.setImage(with: url)
+        
+//        self.myImageView.kf_setImage(with: url)
+        
+        self.myImageView.kf_setImage(with: url, placeholder: UIImage.init(named: "test"), options: nil, progressBlock: nil, completionHandler: nil)
         
         let h = Tools.getLabHeigh(labelStr:  desLabel.text!, font: desLabel.font, width: desLabel.preferredMaxLayoutWidth)
         

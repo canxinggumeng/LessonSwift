@@ -38,6 +38,7 @@
 		2AA53A4D1DA9DE030038B4B7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA53A471DA9DE030038B4B7 /* Info.plist */; };
 		2AA53A4E1DA9DE030038B4B7 /* RegexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A481DA9DE030038B4B7 /* RegexParser.swift */; };
 		2AA53A4F1DA9DE030038B4B7 /* StringTrimExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA53A491DA9DE030038B4B7 /* StringTrimExtension.swift */; };
+		2AA53A711DAA104C0038B4B7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA53A701DAA104C0038B4B7 /* Kingfisher.framework */; };
 		84D60E7B36E79DDC30C0969F /* Pods_LessonSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A93A276D7D736BF49F26B2B /* Pods_LessonSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +211,7 @@
 		2AA53A471DA9DE030038B4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AA53A481DA9DE030038B4B7 /* RegexParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexParser.swift; sourceTree = "<group>"; };
 		2AA53A491DA9DE030038B4B7 /* StringTrimExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTrimExtension.swift; sourceTree = "<group>"; };
+		2AA53A701DAA104C0038B4B7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "../../../../Library/Developer/Xcode/DerivedData/LessonSwift-aebbpgwwujjzcvgrscaudxbeigdq/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework"; sourceTree = "<group>"; };
 		6E6CA113FEE2D4F1DDFD0280 /* Pods-LessonSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessonSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LessonSwift/Pods-LessonSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		8757334D615DB6D467D3E2A1 /* Pods-LessonSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessonSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LessonSwift/Pods-LessonSwift.release.xcconfig"; sourceTree = "<group>"; };
 		8A93A276D7D736BF49F26B2B /* Pods_LessonSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LessonSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA53A711DAA104C0038B4B7 /* Kingfisher.framework in Frameworks */,
 				2AA53A1C1DA8CBB10038B4B7 /* SnapKit.framework in Frameworks */,
 				2AA539471DA89B300038B4B7 /* SwiftyJSON.framework in Frameworks */,
 				2A8370521D9E22BC0017D932 /* Alamofire.framework in Frameworks */,
@@ -403,6 +406,7 @@
 		537B85CED1735CA937B997AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AA53A701DAA104C0038B4B7 /* Kingfisher.framework */,
 				2AA539711DA8C97A0038B4B7 /* SnapKit.framework */,
 				8A93A276D7D736BF49F26B2B /* Pods_LessonSwift.framework */,
 			);

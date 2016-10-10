@@ -27,7 +27,7 @@ class Tools{
     }
     
     // 添加行间距的获取高度
-class  func getLabHeighWithLineSpeace(labelStr:String,font:UIFont,width:CGFloat,lineSpeace:CGFloat) -> CGFloat {
+   class  func getLabHeighWithLineSpeace(labelStr:String,font:UIFont,width:CGFloat,lineSpeace:CGFloat) -> CGFloat {
         
         let statusLabelText: NSMutableAttributedString = NSMutableAttributedString.init(string: labelStr)
         
@@ -59,6 +59,13 @@ class  func getLabHeighWithLineSpeace(labelStr:String,font:UIFont,width:CGFloat,
     
     
     
+   
+    
+    
+}
+
+extension UIColor{
+
     // 颜色转换
     class func hexStringToColor(hexString: String) -> UIColor{
         var cString: String = hexString.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
@@ -87,11 +94,6 @@ class  func getLabHeighWithLineSpeace(labelStr:String,font:UIFont,width:CGFloat,
         return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: CGFloat(1))
         
     }
-    
-    
 }
-
-
-    
 
 

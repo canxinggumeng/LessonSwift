@@ -25,7 +25,7 @@ class DetialViewController: UIViewController {
         label.enabledTypes.append(customType2)
 
         label.urlMaximumLength = 50
-        label.backgroundColor = Tools.hexStringToColor(hexString: "#999999")
+        label.backgroundColor = UIColor.hexStringToColor(hexString: "#999999")
         
        let _  = label.customize { label in
             label.text = "This is a post with #multiple# and #hashtags# and a @userhandle. Links are also supported like" +

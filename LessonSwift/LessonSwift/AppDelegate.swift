@@ -19,10 +19,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewVC  = ViewController();
         
         let navc = UINavigationController.init(rootViewController: viewVC);
+        navc.tabBarItem.title = "列表"
+        
+        let findVC = FindViewController()
+        
+        let navc1 = UINavigationController.init(rootViewController: findVC)
+        navc1.tabBarItem.title = "测试"
         
         
+        let  array = [navc,navc1]
         
-        self.window?.rootViewController = navc;
+        
+        let tabBar = UITabBarController()
+        
+        tabBar.setViewControllers(array, animated: true)
+        
+        
+        self.window?.rootViewController = tabBar;
         
         
         

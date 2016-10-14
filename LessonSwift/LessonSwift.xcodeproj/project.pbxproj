@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A7D513F1DB0A7DD00A30DC3 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D513E1DB0A7DD00A30DC3 /* FindViewController.swift */; };
 		2A82C6451D9E50FE0025E0E8 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82C6441D9E50FE0025E0E8 /* NetWorkTool.swift */; };
 		2A8370521D9E22BC0017D932 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8370451D9E229E0017D932 /* Alamofire.framework */; };
 		2A8DC2261D9D1FEB00D0B921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DC2251D9D1FEB00D0B921 /* AppDelegate.swift */; };
@@ -172,6 +173,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A7D513E1DB0A7DD00A30DC3 /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		2A82C6441D9E50FE0025E0E8 /* NetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
 		2A8370391D9E229E0017D932 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		2A8DC2221D9D1FEB00D0B921 /* LessonSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +308,7 @@
 				2A8DC2531D9D200100D0B921 /* myCell.swift */,
 				2A8DC2591D9DFE3600D0B921 /* viewModel.swift */,
 				2A8DC2571D9DFC7700D0B921 /* DetialViewController.swift */,
+				2A7D513E1DB0A7DD00A30DC3 /* FindViewController.swift */,
 				2A82C6441D9E50FE0025E0E8 /* NetWorkTool.swift */,
 				2AA53A361DA8E7320038B4B7 /* Tools.swift */,
 				2A8DC2291D9D1FEB00D0B921 /* Main.storyboard */,
@@ -736,6 +739,7 @@
 				2AA5395C1DA8B1000038B4B7 /* ESRefreshComponent.swift in Sources */,
 				2A82C6451D9E50FE0025E0E8 /* NetWorkTool.swift in Sources */,
 				2AA539591DA8B1000038B4B7 /* ESPullToRefresh+Manager.swift in Sources */,
+				2A7D513F1DB0A7DD00A30DC3 /* FindViewController.swift in Sources */,
 				2AA53A231DA8D4700038B4B7 /* UITableView+CacheCellHeight.swift in Sources */,
 				2AA53A4B1DA9DE030038B4B7 /* ActiveLabel.swift in Sources */,
 				2AA5395A1DA8B1000038B4B7 /* ESPullToRefresh.swift in Sources */,

@@ -48,7 +48,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         //
         //        self.changcolor();
         
-        self.title = "TableViewList"
+        self.navigationItem.title = "TableViewList"
         self.tableview = UITableView.init(frame: self.view.frame);
         self.tableview.delegate = self;
         self.tableview.dataSource = self;
@@ -71,6 +71,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
             }
         self.tableview.es_startPullToRefresh()
+        
+
         
     }
     
